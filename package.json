@@ -1,0 +1,17 @@
+{
+  "name": "graph",
+  "version": "1.0.0",
+  "description": "Graph canvas animation",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "graph",
+    "animation",
+    "canvas",
+    "vanilla"
+  ],
+  "author": "Fábio Pereira <fabio.pereira.gti@gmail.com>",
+  "license": "MIT"
+}
