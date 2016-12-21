@@ -1,10 +1,14 @@
 {
-  "name": "graph",
+  "name": "animation-graph",
   "version": "1.0.0",
-  "description": "Graph canvas animation",
+  "description": "It is a lib of animation that allows the creation of an animation in the form of a network of moving graphs",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1fabiopereira/animation-graph"
   },
   "keywords": [
     "graph",
