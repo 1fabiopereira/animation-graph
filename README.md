@@ -1,10 +1,46 @@
 # animation-graph
 
 # What is that ?
+It is a lib of animation that allows the creation of an animation in the form of a network of moving graphs
 
 # Install
 
 # How to use ?
+
+Import the plugin:
+
+```html
+<script type="text/javascript" src="dist/bundle-graph.min.js"></script>
+```
+
+Next:
+```javascript
+    <script type="text/javascript">
+		var cores = ['255, 0, 0','191, 85, 236', '0,0,255'];
+		graphAnimation.animate({
+		    selector: 'demo-canvas',
+			colors: cores,
+			speed: 300,
+			density: 100
+		});
+	</script>
+```
+
+## Properties:
+
+#### selector [Required]:
+  Html selector  
+   
+#### colors [Optional]:
+  Array of colors ---- RGB
+    
+#### speed [optional]:
+  Speed of transition between colors ---- milliseconds
+    
+
+#### density [Optional]:
+  Number of points per area ---- from 1 to 100
+    
 
 # License
 
