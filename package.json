@@ -13,5 +13,11 @@
     "vanilla"
   ],
   "author": "Fábio Pereira <fabio.pereira.gti@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-header": "^1.8.8",
+    "gulp-minify": "0.0.14"
+  }
 }
