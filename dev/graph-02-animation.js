@@ -2,7 +2,22 @@ var graphAnimation = (function () {
 
     function animate(params) {
 
-        if (!params.selector) throw new TypeError('Seletor html `selector` não foi defindo.');
+        if (!params.selector){
+          var $wrapper;
+          if (params.element){
+              $wrapper = document.querySelector(params.element);
+          }else{
+               $wrapper = document.querySelector('body');
+          }
+
+              HTMLTemporario = $wrapper.innerHTML;
+              HTMLNovo = '<div id="large-header"  style="height: 809px;"><canvas id="demo-canvas" width="1920" height="809"></canvas></div>';
+              HTMLTemporario = HTMLNovo + HTMLTemporario;
+              $wrapper.innerHTML = HTMLTemporario;
+              params.selector='demo-canvas';
+
+          //throw new TypeError('Seletor html `selector` não foi defindo.');
+        }
         if (!params.colors || !params.colors.length) params.colors = ['191, 85, 236'];
         if (!params.speed) params.speed = 1000;
         if (!params.density) params.density = 40;
