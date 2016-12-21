@@ -36,6 +36,9 @@ const banner = ' /**\n' +
     '*  THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\n' +
     '*  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n' +
     '*\n' +
+    '* ------------------------------------- FOR MORE INFORMATION LOOK: -------------------------------------\n' +
+    '* -------------------------- <%= pkg.repository.url %> --------------------------\n' +
+    '* ------------------------------------------------------------------------------------------------------\n' +
     '*\n' +
     '*/\n';
 

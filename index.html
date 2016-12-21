@@ -9,7 +9,18 @@
 		        <canvas id="demo-canvas" width="1920" height="809"></canvas>
 		    </div>             
 		 </div>
-		<script type="text/javascript" src="greensock.min.js"></script>
-		<script type="text/javascript" src="animation.js"></script>
+
+		<script type="text/javascript" src="dist/bundle-graph.min.js"></script>
+
+		<script type="text/javascript">
+			var cores = ['255, 0, 0','191, 85, 236', '0,0,255'];
+			graphAnimation.animate({
+				selector: 'demo-canvas',
+				colors: cores,
+				speed: 300,
+				density: 50
+			});
+		</script>
+
 	</body>
 </html>
