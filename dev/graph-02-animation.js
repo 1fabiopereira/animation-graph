@@ -2,9 +2,11 @@ var graphAnimation = (function () {
 
     function animate(params) {
 
-        if (!params.$) throw new TypeError('Seletor html `$` não foi defindo.');
+        if (!params.selector) throw new TypeError('Seletor html `selector` não foi defindo.');
         if (!params.colors || !params.colors.length) params.colors = ['191, 85, 236'];
-        if (!params.velocity) params.velocity = 1000;
+        if (!params.speed) params.speed = 1000;
+        if (!params.density) params.density = 40;
+        if(params.density > 100) params.density = 100;
 
         var selectedColor = params.colors[0];
         var min = 0;
@@ -12,7 +14,7 @@ var graphAnimation = (function () {
 
         window.setInterval(function () {
             selectedColor = params.colors[Math.floor(Math.random() * (max - min + 1)) + min];
-        }, params.velocity);
+        }, params.speed);
 
         (function () {
             var lastTime = 0;
@@ -58,7 +60,7 @@ var graphAnimation = (function () {
                 largeHeader = document.getElementById('large-header');
                 largeHeader.style.height = height + 'px';
 
-                canvas = document.getElementById(params.$);
+                canvas = document.getElementById(params.selector);
                 canvas.width = width;
                 canvas.height = height;
                 ctx = canvas.getContext('2d');
@@ -66,10 +68,10 @@ var graphAnimation = (function () {
 
                 // create points
                 points = [];
-                for (var x = 0; x < width; x = x + width / 20) {
-                    for (var y = 0; y < height; y = y + height / 20) {
-                        var px = x + Math.random() * width / 40;
-                        var py = y + Math.random() * height / 40;
+                for (var x = 0; x < width; x = x + width / parseInt(params.density / 2)) {
+                    for (var y = 0; y < height; y = y + height / parseInt(params.density / 2)) {
+                        var px = x + Math.random() * width / params.density;
+                        var py = y + Math.random() * height / params.density;
                         var p = {x: px, originX: px, y: py, originY: py};
                         points.push(p);
                     }

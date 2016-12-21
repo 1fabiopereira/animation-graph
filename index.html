@@ -13,8 +13,13 @@
 		<script type="text/javascript" src="dist/bundle-graph.min.js"></script>
 
 		<script type="text/javascript">
-			var cores = ['255, 0, 0', '0,255,255', '191, 85, 236'];
-			graphAnimation.animate({$: 'demo-canvas', colors: cores});
+			var cores = ['255, 0, 0','191, 85, 236', '0,0,255'];
+			graphAnimation.animate({
+				selector: 'demo-canvas',
+				colors: cores,
+				speed: 300,
+				density: 100
+			});
 		</script>
 
 	</body>
