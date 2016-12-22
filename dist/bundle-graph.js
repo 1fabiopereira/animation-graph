@@ -5,6 +5,8 @@
 *
 * @author  Fábio Pereira <fabio.pereira.gti@gmail.com>
 *
+* @contributors  Luiz Fernando Sene  <nandosenne@gmail.com>
+*
 * @version 1.0.0
 *
 * @description

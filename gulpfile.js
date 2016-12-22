@@ -12,6 +12,8 @@ const banner = ' /**\n' +
     '* @name <%= pkg.name %>\n' +
     '*\n' +
     '* @author  <%= pkg.author %>\n' +
+    '*\n'+
+    '* @contributors  <%= pkg.contributors[0].name %>  <<%= pkg.contributors[0].email %>>\n' +
     '*\n' +
     '* @version <%= pkg.version %>\n' +
     '*\n' +
@@ -42,19 +44,19 @@ const banner = ' /**\n' +
     '*\n' +
     '*/\n';
 
-/* Minify JS */
-gulp.task('compress', ()=>{
-    gulp.src('dev/*.js')
-        .pipe(concat('bundle-graph.js'))
-        .pipe(minify({
-            ext: {
-                src: '.js',
-                min: '.min.js'
-            },
-            exclude: ['tasks'],
-            ignoreFiles: []
-        }))
+    /* Minify JS */
+    gulp.task('compress', ()=>{
+        gulp.src('dev/*.js')
+            .pipe(concat('bundle-graph.js'))
+            .pipe(minify({
+                ext: {
+                    src: '.js',
+                    min: '.min.js'
+                },
+                exclude: ['tasks'],
+                ignoreFiles: []
+            }))
 
-        .pipe(header(banner, {pkg: pkg}))
-        .pipe(gulp.dest('dist/'));
-});
+            .pipe(header(banner, {pkg: pkg}))
+            .pipe(gulp.dest('dist/'));
+    });

@@ -17,6 +17,10 @@
     "vanilla"
   ],
   "author": "Fábio Pereira <fabio.pereira.gti@gmail.com>",
+  "contributors": [{
+    "name": "Luiz Fernando Sene",
+    "email": "nandosenne@gmail.com"
+  }],
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.1",
