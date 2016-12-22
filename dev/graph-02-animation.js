@@ -3,10 +3,11 @@ var graphAnimation = (function () {
     function animate(params) {
 
         if (!params.selector) throw new TypeError('Seletor html `selector` não foi defindo.');
-        if (!params.colors || !params.colors.length) params.colors = ['191, 85, 236'];
+        if (!params.colors || !params.colors.length) params.colors = ['191, 85, 236', '255, 0, 0'];
         if (!params.speed) params.speed = 1000;
         if (!params.density) params.density = 40;
-        if(params.density > 100) params.density = 100;
+        if (params.density > 100) params.density = 100;
+
 
         var selectedColor = params.colors[0];
         var min = 0;
@@ -57,7 +58,7 @@ var graphAnimation = (function () {
                 height = window.innerHeight;
                 target = {x: width / 2, y: height / 2};
 
-                largeHeader = document.getElementById('large-header');
+                largeHeader = document.getElementById('graph-animation');
                 largeHeader.style.height = height + 'px';
 
                 canvas = document.getElementById(params.selector);
@@ -185,7 +186,7 @@ var graphAnimation = (function () {
             }
 
             function shiftPoint(p) {
-                TweenLite.to(p, 1 + 1 * Math.random(), {
+                TweenLite.to(p, 1 + Math.random(), {
                     x: p.originX - 50 + Math.random() * 100,
                     y: p.originY - 50 + Math.random() * 100, ease: Circ.easeInOut,
                     onComplete: function () {

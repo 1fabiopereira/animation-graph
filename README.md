@@ -5,16 +5,22 @@ It is a lib of animation that allows the creation of an animation in the form of
 
 # Install
 
+```
+bower install animation-graph
+```
 # How to use ?
 
-Import the plugin:
+* Import the plugin in your html file:
 
 ```html
 <script type="text/javascript" src="dist/bundle-graph.min.js"></script>
 ```
 
 Next:
-```javascript
+
+ * Create instance of graph-animation
+
+```html
     <script type="text/javascript">
 		var cores = ['255, 0, 0','191, 85, 236', '0,0,255'];
 		graphAnimation.animate({
@@ -26,20 +32,36 @@ Next:
 	</script>
 ```
 
+Next:
+
+* Create box of animation
+
+```html
+	 <div class="main_container">
+		<div id="graph-animation" style="height: 809px;">
+		   <canvas id="demo-canvas" width="1920" height="809"></canvas>
+		</div>             
+	</div>
+```
+
 ## Properties:
 
 #### selector [Required]:
-  Html selector  
+* Html selector  
+
    
 #### colors [Optional]:
-  Array of colors ---- RGB
+* Array of colors in RGB scale
+    * Default: ['191, 85, 236', '255, 0, 0']
     
 #### speed [optional]:
-  Speed of transition between colors ---- milliseconds
+* Speed of transition between colors in milliseconds
+    * Default: 1000 ms
     
 
 #### density [Optional]:
-  Number of points per area ---- from 1 to 100
+* Number of points per area from 1 to 100
+    * Default: 40
     
 
 # License
