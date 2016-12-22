@@ -106,8 +106,8 @@ var graphAnimation = (function () {
 
                 // create points
                 points = [];
-                for (var x = 0; x < width; x = x + width / parseInt(params.density / 2)) {
-                    for (var y = 0; y < height; y = y + height / parseInt(params.density / 2)) {
+                for (var x = 0; x < width; x = x + width / 20) {
+                    for (var y = 0; y < height; y = y + height / 20) {
                         var px = x + Math.random() * width / params.density;
                         var py = y + Math.random() * height / params.density;
                         var p = {x: px, originX: px, y: py, originY: py};
@@ -172,7 +172,7 @@ var graphAnimation = (function () {
                     posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
                 }
                 target.x = posx;
-                target.y = posy;
+                target.y = posy - largeHeader.offsetTop;
             }
 
             function scrollCheck() {
