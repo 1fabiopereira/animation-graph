@@ -1,24 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.min.css">
+	<title>Animation-graph</title>
+	<meta name="description" content>
+	<meta name="author" content>
 </head>
-	<body>
-		 <div class="main_container">
-		    <div id="graph-animation" style="height: 809px;">
-		        <canvas id="canvas" width="1920" height="809"></canvas>
-		    </div>
-		 </div>
+<body>
+<style type="text/css">
+	.header {
+		margin-top:5em;
+		margin-bottom:5em;
+	}
+	.header > h2 {
+		font-weight: 300;
+	}
+	.header > .button {
+		margin-top: 10px;
+	}
+	.row-example > .row {
+		margin-bottom:10px;
+	}
+	.well {
+		background-color: #ededed;
+		border-radius: 5px;
+		padding: 10px 0;
+	}
+	footer {
+		margin-top: 4em;
+	}
+	@media (max-width: 550px) {
+		body {
+			text-align: justify;
+		}
+	}
+</style>
 
-		<script type="text/javascript" src="dist/bundle-graph.min.js"></script>
+<div class="row">
+	<div class="well text-center primary">
+		<h6>Animation-graph</h6>
+		<p>Create amazing animations in the form of graphs.</p>
+		<a class="button button-success" target="_blank" href="https://github.com/1fabiopereira/animation-graph">See More</a>
+	</div>
+</div>
 
-		<script type="text/javascript">
-			
-			graphAnimation.animate({
-				selector: 'canvas'
-			});
+<section clas>
+	<div class="main_container">
+		<div id="graph-animation" style="height: 400px;">
+			<div class="text-center">
+				<p>&#169; Copyright by <a href="https://github.com/1fabiopereira">Fábio Pereira</a>. <b>2016</b></p>
+			</div>
+			<canvas id="canvas" width="1920" height="400"></canvas>
+		</div>
+	</div>
 
-		</script>
+	<script type="text/javascript" src="dist/bundle-graph.min.js"></script>
+	<script type="text/javascript">
 
-	</body>
-</html>
+		graphAnimation.animate({
+			selector: 'canvas'
+		});
+	</script>
+</section>
+
+</body>
+
+
