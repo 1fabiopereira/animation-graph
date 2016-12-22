@@ -1,0 +1,23 @@
+{
+  "name": "animation-graph",
+  "description": "It is a lib of animation that allows the creation of an animation in the form of a network of moving graphs",
+  "main": "app.js",
+  "authors": [
+    "Fábio Pereira <fabio.pereira.gti@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "graph",
+    "animation",
+    "canvas",
+    "vanilla"
+  ],
+  "homepage": "https://github.com/1fabiopereira/animation-graph",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
