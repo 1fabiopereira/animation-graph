@@ -172,7 +172,7 @@ var graphAnimation = (function () {
                     posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
                 }
                 target.x = posx;
-                target.y = posy;
+                target.y = posy - largeHeader.offsetTop;
             }
 
             function scrollCheck() {
